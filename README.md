@@ -16,18 +16,18 @@ Name:
 Function: 
 
 
-Customer Management Function
+Customer Management Function <br/>
 
-Student ID: IT21269134
-Name:K.G.I.H.C.Kumbukgolla
-Function:Customer Management Function
+Student ID: IT21269134 <br/>
+Name:K.G.I.H.C.Kumbukgolla <br/>
+Function:Customer Management Function <br/>
 
 
-Farmer Managemnt Function 
+Farmer Managemnt Function <br/>
 
-Student ID: IT21272240	
-Name: Perera K.P.R.T
-Function: Farmer management Function
+Student ID: IT21272240	<br/>
+Name: Perera K.P.R.T <br/>
+Function: Farmer management Function <br/>
 
 
 
