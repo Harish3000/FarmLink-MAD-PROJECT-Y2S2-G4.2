@@ -16,11 +16,11 @@ Name:
 Function: 
 
 
-Function n1
+Customer Management Function
 
-Student ID: 
-Name:
-Function:
+Student ID: IT21269134
+Name:K.G.I.H.C.Kumbukgolla
+Function:Customer Management Function
 
 
 Farmer Managemnt Function 
