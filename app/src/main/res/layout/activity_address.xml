@@ -14,8 +14,8 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:hint="@string/editFullName"
         android:inputType="textPersonName"
-        android:text="@string/editFullName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -28,8 +28,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:hint="@string/editAddress1"
         android:inputType="textPostalAddress"
-        android:text="@string/editAddress1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editFullName" />
@@ -42,8 +42,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:hint="@string/editAddress2"
         android:inputType="textPostalAddress"
-        android:text="@string/editAddress2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editAddress1" />
@@ -55,8 +55,8 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:ems="10"
+        android:hint="@string/editCity"
         android:inputType="textPostalAddress"
-        android:text="@string/editCity"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editAddress2" />
 
@@ -68,8 +68,8 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:hint="@string/editDistrict"
         android:inputType="textPostalAddress"
-        android:text="@string/editDistrict"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editCity"
         app:layout_constraintTop_toBottomOf="@+id/editAddress2" />
@@ -79,11 +79,11 @@
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:hint="@string/editPhone"
         android:inputType="phone"
-        android:text="@string/editPhone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -153,4 +153,5 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
