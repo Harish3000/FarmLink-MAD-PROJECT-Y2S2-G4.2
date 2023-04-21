@@ -7,9 +7,16 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:text="Cart" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="@string/btn_checkout" />
 
 </FrameLayout>

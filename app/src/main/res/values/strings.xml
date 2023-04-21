@@ -2,4 +2,14 @@
     <string name="app_name">FarmLink</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_checkout">Checkout</string>
+    <string name="editFullName">Full Name</string>
+    <string name="editAddress1">Address Line 1</string>
+    <string name="editAddress2">Address Line 2</string>
+    <string name="editCity">City</string>
+    <string name="editDistrict">District</string>
+    <string name="editPhone">Phone</string>
+    <string name="tvAddress">Addresses</string>
+    <string name="btnDelete">Delete</string>
+    <string name="btnSave">Save</string>
 </resources>
