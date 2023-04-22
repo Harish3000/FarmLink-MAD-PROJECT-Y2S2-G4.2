@@ -13,4 +13,15 @@
     <color name="bottom_nav_item">#8C706D</color>
     <color name="bottom_nav_selected_item">#220006</color>
     <color name="fragment_bg_color">#FDF8F4</color>
+
+<!--    Customer resource colors-->
+    <color name="primary">#B7CAA2</color>
+    <color name="Secondary">#068051</color>
+    <color name="night_mode">#6124B1</color>
+    <color name="notification">#13B2C3</color>
+    <color name="All_orders">#2196F3</color>
+    <color name="track_orders">#9F9999</color>
+    <color name="Billing_and__addressing">#E6A326</color>
+    <color name="language">#8024B1</color>
+    <color name="Logout">#D95F69</color>
 </resources>
