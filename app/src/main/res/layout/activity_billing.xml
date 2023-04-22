@@ -25,10 +25,11 @@
             app:srcCompat="@drawable/close_btn" />
 
         <TextView
-            android:id="@+id/tvBilling"
+            android:id="@+id/tvAddresses"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="7"
+            android:gravity="center|center_horizontal|center_vertical"
             android:text="@string/tvBilling"
             android:textAlignment="center"
             android:textSize="24sp"

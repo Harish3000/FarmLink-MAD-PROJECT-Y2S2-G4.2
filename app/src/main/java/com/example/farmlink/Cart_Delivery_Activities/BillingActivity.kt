@@ -1,6 +1,7 @@
 package com.example.farmlink.Cart_Delivery_Activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -46,6 +47,23 @@ class BillingActivity : AppCompatActivity() {
                     }
                     val mAdapter = AddressAdapter(addressList)
                     addressRecyclerView.adapter = mAdapter
+
+                    //to click on the card and navigate
+                    mAdapter.setOnItemClickListener(object : AddressAdapter.onItemClickListener{
+                        override fun onItemClick(position: Int) {
+                            val intent = Intent(this@BillingActivity, AddressDetailsActivity::class.java)
+
+                            //put extras
+                            intent.putExtra("addressId", addressList[position].addressId)
+                            intent.putExtra("fullName", addressList[position].fullName)
+                            intent.putExtra("addressLine1", addressList[position].addressLine1)
+                            intent.putExtra("addressLine2", addressList[position].addressLine2)
+                            intent.putExtra("city", addressList[position].city)
+                            intent.putExtra("district", addressList[position].district)
+                            intent.putExtra("phone", addressList[position].phone)
+                            startActivity(intent)
+                        }
+                    })
 
                     addressRecyclerView.visibility = View.VISIBLE
 

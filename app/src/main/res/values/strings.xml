@@ -16,4 +16,13 @@
     <string name="tvPayMethod">Payment Method</string>
     <string name="tvPayText">Only Cash On Delivery Available</string>
     <string name="tvShippingAddress">Shipping Address</string>
+    <string name="tvAddressId">Address ID</string>
+    <string name="tvFullName">Full Name</string>
+    <string name="tvAddress1">Address Line 1</string>
+    <string name="tvAddress2">Address Line 2</string>
+    <string name="tvCity">City</string>
+    <string name="tvDistrict">District</string>
+    <string name="tvPhone">Phone Number</string>
+    <string name="btnUpdate">Update</string>
+    <string name="tvAddressDetails">Address Details</string>
 </resources>

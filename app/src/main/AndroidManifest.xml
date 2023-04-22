@@ -28,6 +28,7 @@
         </activity>
         <activity android:name=".Cart_Delivery_Activities.AddressAcivity" android:exported="false" />
         <activity android:name=".Cart_Delivery_Activities.BillingActivity" android:exported="false" />
+        <activity android:name=".Cart_Delivery_Activities.AddressDetailsActivity" android:exported="false" />
     </application>
 
 </manifest>

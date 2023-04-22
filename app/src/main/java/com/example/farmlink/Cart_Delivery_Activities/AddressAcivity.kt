@@ -32,7 +32,7 @@ class AddressAcivity : AppCompatActivity() {
         edtCity = findViewById(R.id.editCity)
         edtDistrict = findViewById(R.id.editDistrict)
         edtPhone = findViewById(R.id.editPhone)
-        btnSaveData = findViewById(R.id.btnSave)
+        btnSaveData = findViewById(R.id.btnUpdate)
         btnDelete = findViewById(R.id.btnDelete)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Addresses")
