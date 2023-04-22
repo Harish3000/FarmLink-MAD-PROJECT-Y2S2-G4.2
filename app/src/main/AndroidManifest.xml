@@ -26,7 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddressAcivity" android:exported="false" />
+        <activity android:name=".Cart_Delivery_Activities.AddressAcivity" android:exported="false" />
+        <activity android:name=".Cart_Delivery_Activities.BillingActivity" android:exported="false" />
     </application>
 
 </manifest>

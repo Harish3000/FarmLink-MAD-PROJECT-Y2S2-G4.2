@@ -12,4 +12,8 @@
     <string name="tvAddress">Addresses</string>
     <string name="btnDelete">Delete</string>
     <string name="btnSave">Save</string>
+    <string name="tvBilling">Billing</string>
+    <string name="tvPayMethod">Payment Method</string>
+    <string name="tvPayText">Only Cash On Delivery Available</string>
+    <string name="tvShippingAddress">Shipping Address</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.example.farmlink
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import com.example.farmlink.Cart_Delivery_Activities.AddressAcivity
+import com.example.farmlink.Cart_Delivery_Activities.BillingActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,12 +62,19 @@ class CartFragment : Fragment() {
             }
     }
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_cart, container, false)
 
         val button = view.findViewById<Button>(R.id.btn_checkout)
         button.setOnClickListener {
             val intent = Intent(activity, AddressAcivity::class.java)
+            startActivity(intent)
+        }
+
+        val button2 = view.findViewById<Button>(R.id.btn_billing)
+        button2.setOnClickListener {
+            val intent = Intent(activity, BillingActivity::class.java)
             startActivity(intent)
         }
 
