@@ -19,7 +19,6 @@ class AddressAcivity : AppCompatActivity() {
     private lateinit var edtDistrict : EditText
     private lateinit var edtPhone : EditText
     private lateinit var btnSaveData : Button
-    private lateinit var btnDelete : Button
 
     private lateinit var dbRef : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +32,6 @@ class AddressAcivity : AppCompatActivity() {
         edtDistrict = findViewById(R.id.editDistrict)
         edtPhone = findViewById(R.id.editPhone)
         btnSaveData = findViewById(R.id.btnUpdate)
-        btnDelete = findViewById(R.id.btnDelete)
 
         dbRef = FirebaseDatabase.getInstance().getReference("Addresses")
 

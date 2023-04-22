@@ -1,5 +1,6 @@
 package com.example.farmlink.Cart_Delivery_Activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -34,6 +35,12 @@ class AddressDetailsActivity : AppCompatActivity() {
             openUpdateDialog(
                 intent.getStringExtra("addressId").toString(),
                 intent.getStringExtra("fullName").toString()
+            )
+        }
+
+        btnDelete.setOnClickListener {
+            deleteRecord(
+                intent.getStringExtra("addressId").toString(),
             )
         }
     }
@@ -129,5 +136,19 @@ class AddressDetailsActivity : AppCompatActivity() {
         val dbRef = FirebaseDatabase.getInstance().getReference("Addresses").child(id)
         val addressInfo = AddressData(id,fullName,address1,address2,city,district,phone)
         dbRef.setValue(addressInfo)
+    }
+
+    private fun deleteRecord( id: String) {
+        val dbRef = FirebaseDatabase.getInstance().getReference("Addresses").child(id)
+        val mTask = dbRef.removeValue()
+
+        mTask.addOnSuccessListener {
+            Toast.makeText(this, "Address Deleted", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, BillingActivity::class.java)
+            finish()
+            startActivity(intent)
+        }.addOnFailureListener { error ->
+            Toast.makeText(this, "Deleting Address Error ${error.message}", Toast.LENGTH_LONG).show()
+        }
     }
 }
