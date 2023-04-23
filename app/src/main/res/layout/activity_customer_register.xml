@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    tools:context=".CustomerRegisterActivity">
+
+    <ImageView
+        android:id="@+id/topimg"
+        android:layout_width="459dp"
+        android:layout_height="201dp"
+        android:contentDescription="@string/TopImg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/top_background" />
+
+    <TextView
+        android:id="@+id/LoginWelcome"
+        android:layout_width="328dp"
+        android:layout_height="122dp"
+        android:layout_marginBottom="60dp"
+        android:autoSizeMaxTextSize="30sp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/CreateAccount"
+
+        android:textColor="#FEFEFE"
+        android:textSize="@dimen/CreateAccountTitle"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/topimg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <LinearLayout
+
+        android:layout_width="403dp"
+        android:layout_height="640dp"
+        android:layout_marginStart="4dp"
+        android:orientation="vertical"
+        android:padding="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topimg"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/Name"
+            android:textColor="#0C0B0B"
+            android:textSize="@dimen/CreateAccountTxt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/EnterName"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="@string/EnterName"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#707070"
+            android:textSize="@dimen/CreateAccountInputValues" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/Email1"
+            android:textColor="#0C0B0B"
+            android:textSize="@dimen/CreateAccountTxt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/entertheEmail"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="@string/EnteryourEmail"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#707070"
+            android:textSize="@dimen/CreateAccountInputValues" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/userName"
+            android:textColor="#0C0B0B"
+            android:textSize="@dimen/CreateAccountTxt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/enterPaswordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="@string/Enterusername"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#707070"
+            android:textSize="@dimen/CreateAccountInputValues" />
+
+        <TextView
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/Password"
+            android:textColor="#0C0B0B"
+            android:textSize="@dimen/CreateAccountTxt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/RepeatPassword"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_margin="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:ems="10"
+            android:hint="@string/EnterPassword"
+            android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#707070"
+            android:textSize="@dimen/CreateAccountInputValues" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Signup"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:text="@string/Signup"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/SignUpBtn"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
