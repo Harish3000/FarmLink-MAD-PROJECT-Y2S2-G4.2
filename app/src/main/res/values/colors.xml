@@ -14,7 +14,8 @@
     <color name="bottom_nav_selected_item">#220006</color>
     <color name="fragment_bg_color">#FDF8F4</color>
 
-<!--    Customer resource colors-->
+
+<!--customer colours starts-->
     <color name="primary">#B7CAA2</color>
     <color name="Secondary">#068051</color>
     <color name="night_mode">#6124B1</color>
@@ -24,4 +25,6 @@
     <color name="Billing_and__addressing">#E6A326</color>
     <color name="language">#8024B1</color>
     <color name="Logout">#D95F69</color>
+    <!--customer colours ends-->
+
 </resources>
