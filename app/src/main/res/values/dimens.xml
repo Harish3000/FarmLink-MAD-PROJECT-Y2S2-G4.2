@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
-<!--    Customer dimens-->
+    <!--customer dimens starts -->
     <dimen name="EditProfileTitle">35sp</dimen>
     <dimen name="ForgetPw">14sp</dimen>
     <dimen name="SaveBtn">14sp</dimen>
@@ -27,5 +28,10 @@
     <dimen name="CreateAccountTxt">20sp</dimen>
     <dimen name="CreateAccountInputValues">18sp</dimen>
     <dimen name="SignUpBtn">25sp</dimen>
+
+    <!--customer dimens ends -->
 </resources>
+
+
+
 
