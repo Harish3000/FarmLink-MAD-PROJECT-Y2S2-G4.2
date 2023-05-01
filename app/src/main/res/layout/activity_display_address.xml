@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Cart_Delivery_Activities.AddressDetailsActivity">
@@ -19,14 +20,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/btn_close"
+            android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/close_btn" />
 
         <TextView
-            android:id="@+id/tvAddresses"
+            android:id="@+id/tvCart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="7"

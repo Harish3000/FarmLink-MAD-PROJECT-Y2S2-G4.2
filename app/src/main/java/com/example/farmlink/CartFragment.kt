@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.farmlink.Cart_Delivery_Activities.AddressAcivity
 import com.example.farmlink.Cart_Delivery_Activities.BillingActivity
+import com.example.farmlink.Cart_Delivery_Activities.ProductActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,6 +76,12 @@ class CartFragment : Fragment() {
         val button2 = view.findViewById<Button>(R.id.btn_billing)
         button2.setOnClickListener {
             val intent = Intent(activity, BillingActivity::class.java)
+            startActivity(intent)
+        }
+
+        val button3 = view.findViewById<Button>(R.id.btnProducts)
+        button3.setOnClickListener {
+            val intent = Intent(activity, ProductActivity::class.java)
             startActivity(intent)
         }
 

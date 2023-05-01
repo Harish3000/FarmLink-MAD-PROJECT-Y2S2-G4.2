@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,6 +18,9 @@ import com.google.firebase.database.*
 class BillingActivity : AppCompatActivity() {
 
     private lateinit var addressRecyclerView: RecyclerView
+    private lateinit var btnAddAddresses: ImageView
+    private lateinit var btn_back: ImageView
+    private lateinit var btnOrder: Button
     private lateinit var addressList: ArrayList<AddressData>
     private lateinit var dbRef: DatabaseReference
 
@@ -28,6 +33,20 @@ class BillingActivity : AppCompatActivity() {
         addressRecyclerView.setHasFixedSize(true)
 
         addressList = arrayListOf<AddressData>()
+
+        btnAddAddresses = findViewById(R.id.btnAddAddresses)
+        btnAddAddresses.setOnClickListener{
+            val intent = Intent(this, AddressAcivity::class.java)
+            startActivity(intent)
+        }
+
+        btn_back = findViewById(R.id.btn_back)
+        btn_back.setOnClickListener{ finish() }
+
+//        btnOrder = findViewById(R.id.btnOrder)
+//        btnOrder.setOnClickListener {
+//            var intent = Intent(this, )
+//        }
 
         getAddressData()
     }

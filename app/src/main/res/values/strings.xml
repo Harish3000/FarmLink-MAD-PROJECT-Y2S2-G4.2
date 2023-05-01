@@ -25,4 +25,6 @@
     <string name="tvPhone">Phone Number</string>
     <string name="btnUpdate">Update</string>
     <string name="tvAddressDetails">Address Details</string>
+    <string name="tvCart">My Cart</string>
+    <string name="btnOrder">PLACE ORDER</string>
 </resources>
