@@ -13,10 +13,10 @@
         <item name="android:statusBarColor">@color/bottom_nav_selected_item</item>
         <!-- Customize your theme here. -->
 
-<!--        Customer theames-->
+<!--        Customer themes-->
         <!-- Status bar color. -->
-<!--        <item name="android:statusBarColor">@color/purple_500</item>-->
-        <!--    theme style for nightMode switch-->
+
+<!--            theme style for nightMode switch-->
         <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
             <item name="colorControlActivated">@color/night_mode</item>
             <item name="colorSwitchThumbNormal">#FFFFFF</item>
