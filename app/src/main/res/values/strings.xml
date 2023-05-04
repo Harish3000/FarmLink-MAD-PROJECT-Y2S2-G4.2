@@ -49,6 +49,7 @@
     <string name="userName">Username</string>
     <string name="UserName">Username</string>
     <string name="Notamember">Not a member?</string>
+    <string name="PleaseWait">Please Wait..</string>
     <!--    customer strings end -->
 
 </resources>

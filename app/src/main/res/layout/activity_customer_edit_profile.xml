@@ -9,7 +9,7 @@
     tools:context=".CustomerEditProfile">
 
     <Button
-        android:id="@+id/DeleteBtn"
+        android:id="@+id/cusProfileDeleteBtn"
         android:layout_width="156dp"
         android:layout_height="71dp"
         android:layout_marginBottom="44dp"
@@ -18,8 +18,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/SaveBtn"
-        app:layout_constraintTop_toBottomOf="@+id/ChangePassword"
+        app:layout_constraintStart_toEndOf="@+id/cusProfileSaveBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cusProfileChangePassword"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/EditText"
+        android:id="@+id/cusProfileEditText"
         android:layout_width="210dp"
         android:layout_height="52dp"
         android:fontFamily="@font/poppins_semibold"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.902" />
 
     <ImageView
-        android:id="@+id/Profile"
+        android:id="@+id/cusProfileImg"
         android:layout_width="238dp"
         android:layout_height="177dp"
         android:layout_marginTop="10dp"
@@ -64,37 +64,37 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/LastName"
+        android:id="@+id/cusProfileEmail"
         android:layout_width="318dp"
         android:layout_height="53dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="@string/contactNumber"
+        android:hint="@string/Email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstName"
+        app:layout_constraintTop_toBottomOf="@+id/cusProfileName"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/Email"
+        android:id="@+id/cusProfileUsername"
         android:layout_width="315dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="@string/Email"
+        android:hint="@string/userName"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LastName"
+        app:layout_constraintTop_toBottomOf="@+id/cusProfileEmail"
         app:layout_constraintVertical_bias="0.017" />
 
     <TextView
-        android:id="@+id/ChangePassword"
+        android:id="@+id/cusProfileChangePassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -103,11 +103,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintTop_toBottomOf="@+id/cusProfileUsername"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/SaveBtn"
+        android:id="@+id/cusProfileSaveBtn"
         android:layout_width="156dp"
         android:layout_height="71dp"
         android:layout_marginStart="28dp"
@@ -116,13 +116,13 @@
         android:text="@string/SaveBtn"
         android:textSize="@dimen/SaveBtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/DeleteBtn"
+        app:layout_constraintEnd_toStartOf="@+id/cusProfileDeleteBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/DeleteBtn" />
+        app:layout_constraintTop_toTopOf="@+id/cusProfileDeleteBtn" />
 
     <EditText
-        android:id="@+id/FirstName"
+        android:id="@+id/cusProfileName"
         android:layout_width="325dp"
         android:layout_height="52dp"
         android:layout_marginTop="12dp"
@@ -133,12 +133,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Profile"
+        app:layout_constraintTop_toBottomOf="@+id/cusProfileImg"
         app:layout_constraintVertical_bias="0.042" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="TopImage,EditText,Profile,FirstName,LastName,Email,ChangePassword,SaveBtn" />
+        app:constraint_referenced_ids="TopImage,cusProfileEditText,cusProfileImg,cusProfileName,cusProfileEmail,cusProfileUsername,cusProfileChangePassword,cusProfileSaveBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
