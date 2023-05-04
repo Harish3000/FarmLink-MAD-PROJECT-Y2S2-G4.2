@@ -66,7 +66,7 @@ class ProfileFragment : Fragment() {
 
         val button = view.findViewById<Button>(R.id.my_button)
         button.setOnClickListener {
-            val intent = Intent(activity, CustomerRegisterActivity::class.java)
+            val intent = Intent(activity,CustomerHomePage::class.java)
             startActivity(intent)
         }
 
