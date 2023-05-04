@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:text="home" />
 
-
     <!-- Launch test -->
     <Button
         android:id="@+id/my_button"
@@ -20,5 +19,13 @@
         android:layout_height="wrap_content"
         android:text="Launch Activity"
         android:layout_gravity="center_horizontal|center_vertical" />
+
+    <!-- Second button -->
+    <Button
+        android:id="@+id/my_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="Button 2" />
 
 </FrameLayout>
