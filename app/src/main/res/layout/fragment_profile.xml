@@ -17,7 +17,7 @@
         android:id="@+id/my_button"
         android:layout_width="143dp"
         android:layout_height="wrap_content"
-        android:text="Launch Customer Profile"
+        android:text="Let's get started"
         android:layout_gravity="center_horizontal|center_vertical" />
 
 </FrameLayout>
