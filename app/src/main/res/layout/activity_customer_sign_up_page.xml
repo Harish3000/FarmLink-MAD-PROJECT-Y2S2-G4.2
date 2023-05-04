@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="800dp"
-    tools:context=".CustomerRegisterActivity">
+    tools:context=".CustomerSignUp">
 
     <ImageView
         android:id="@+id/topimg"
@@ -61,7 +61,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/EnterName"
+            android:id="@+id/entertheName"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_margin="12dp"
@@ -111,7 +111,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/enterPaswordTxt"
+            android:id="@+id/entertheUsername"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_margin="12dp"
@@ -136,7 +136,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/RepeatPassword"
+            android:id="@+id/enterthePassword"
             android:layout_width="match_parent"
             android:layout_height="43dp"
             android:layout_margin="12dp"
@@ -150,7 +150,7 @@
             android:textSize="@dimen/CreateAccountInputValues" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Signup"
+            android:id="@+id/SignupBtn"
             style="@style/Widget.AppCompat.Button"
             android:layout_width="match_parent"
             android:layout_height="50dp"
