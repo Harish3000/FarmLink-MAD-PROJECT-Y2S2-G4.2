@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<!--    customer strings start -->
+    <!--    customer strings start -->
     <string name="TopImage">image!</string>
     <string name="EditProfileText">Edit Profile</string>
     <string name="Profile">Profile</string>
@@ -24,7 +24,7 @@
     <string name="Password">Password</string>
     <string name="PleaseLogin">Hi, Please Login</string>
     <string name="EnteryourEmail">Enter your Email</string>
-    <string name="forgotPw">Don\'t Remember the Password? Recover Here.</string>
+    <string name="forgotPw">Dont Remember the Password? Recover Here.</string>
     <string name="TopImg" />
     <string name="Or">Or Login with</string>
     <string name="facebook" />
@@ -48,6 +48,7 @@
     <string name="Enterusername">Enter the username</string>
     <string name="userName">Username</string>
     <string name="UserName">Username</string>
+    <string name="Notamember">Not a member?</string>
     <!--    customer strings end -->
 
 </resources>
