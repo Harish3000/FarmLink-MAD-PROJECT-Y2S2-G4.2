@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="800dp"
-    tools:context=".CustomerSignUp">
+    tools:context=".CustomerSignUpPage">
 
     <ImageView
         android:id="@+id/topimg"
@@ -24,7 +24,7 @@
         android:layout_width="328dp"
         android:layout_height="122dp"
         android:layout_marginBottom="60dp"
-        android:autoSizeMaxTextSize="30sp"
+        android:autoSizeMaxTextSize="30dp"
         android:fontFamily="@font/poppins"
         android:text="@string/CreateAccount"
 

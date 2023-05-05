@@ -15,7 +15,7 @@ class CustomerHomePage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
-        val firebase :DatabaseReference=FirebaseDatabase.getInstance().getReference()
+//        val firebase :DatabaseReference=FirebaseDatabase.getInstance().getReference()
 
         btnStart =findViewById(R.id.GetStarted)
 

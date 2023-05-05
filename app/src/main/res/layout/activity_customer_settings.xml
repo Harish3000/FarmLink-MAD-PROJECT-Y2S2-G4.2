@@ -66,7 +66,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/EditProfileBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/round_back_sec_100"
@@ -116,7 +116,7 @@
                     <androidx.appcompat.widget.SwitchCompat
                         android:id="@+id/NightModeSwitch"
                         android:layout_width="wrap_content"
-                        android:layout_height="36dp"
+                        android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:backgroundTint="#000000"
@@ -157,7 +157,7 @@
                     <androidx.appcompat.widget.AppCompatCheckBox
                         android:id="@+id/NotificationCheckBox"
                         android:layout_width="wrap_content"
-                        android:layout_height="36dp"
+                        android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:buttonTint="#FFFFFF"
