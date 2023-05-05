@@ -54,11 +54,19 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     //customer firebase libraries
+<<<<<<< HEAD
     implementation 'com.google.firebase:firebase-database:20.0.4'//realtime database
     implementation 'com.google.firebase:firebase-auth:21.3.0'//authentication
     implementation 'com.google.firebase:firebase-storage:20.2.0' //storage
 
     implementation 'com.google.firebase:firebase-appcheck:16.1.2'
+=======
+    implementation 'com.google.firebase:firebase-auth:21.3.0'  //authontication
+    implementation 'com.google.firebase:firebase-database:20.2.0' //realtime database
+    implementation 'com.google.firebase:firebase-storage:20.2.0' //storage
+    implementation platform('com.google.firebase:firebase-bom:31.5.0')
+    implementation 'com.google.firebase:firebase-database-ktx'
+>>>>>>> parent of c0d9ba4 (update files)
 
 
     //progression dialog library
