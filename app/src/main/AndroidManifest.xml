@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
-
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,13 +12,13 @@
         android:theme="@style/Theme.FarmLink"
         tools:targetApi="31">
         <activity
+            android:name=".CustomerEditProfile"
+            android:exported="false" />
+        <activity
             android:name=".CustomerSettings"
             android:exported="false" />
         <activity
             android:name=".CustomerLogin"
-            android:exported="false" />
-        <activity
-            android:name=".CustomerEditProfile"
             android:exported="false" />
         <activity
             android:name=".CustomerSignUpPage"
@@ -27,11 +26,9 @@
         <activity
             android:name=".CustomerHomePage"
             android:exported="false" />
-
         <activity
             android:name=".FeedbackActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
