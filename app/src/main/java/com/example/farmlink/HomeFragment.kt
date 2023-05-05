@@ -7,8 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.farmlink.activities.FeedbackActivity
-import com.example.farmlink.activities.ProductPageActivity
+import com.example.farmlink.store_manager_activities.ProductPageActivity
 
 class HomeFragment : Fragment() {
 

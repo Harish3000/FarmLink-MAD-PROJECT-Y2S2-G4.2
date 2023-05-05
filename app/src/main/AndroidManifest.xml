@@ -12,31 +12,31 @@
         android:theme="@style/Theme.FarmLink"
         tools:targetApi="31">
         <activity
-            android:name=".activities.ProductDetails"
+            android:name=".store_manager_activities.ProductDetails"
             android:exported="false" />
         <activity
-            android:name=".activities.ProductPageActivity"
+            android:name=".store_manager_activities.ProductPageActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.FeedbackDetails"
+            android:name=".store_manager_activities.FeedbackDetails"
             android:exported="false" />
         <activity
-            android:name=".activities.FeedbackFetch"
+            android:name=".store_manager_activities.FeedbackFetch"
             android:exported="false" />
         <activity
-            android:name=".activities.FeedbackInsert"
+            android:name=".store_manager_activities.FeedbackInsert"
             android:exported="false" />
         <activity
             android:name=".Feedback_Insert"
             android:exported="false" />
         <activity
-            android:name=".activities.FeedbackActivity"
+            android:name=".store_manager_activities.FeedbackActivity"
             android:exported="false" />
         <activity
             android:name=".test"
             android:exported="false" />
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".store_manager_activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

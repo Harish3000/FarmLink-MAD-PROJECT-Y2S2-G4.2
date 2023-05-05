@@ -1,4 +1,4 @@
-package com.example.farmlink.activities
+package com.example.farmlink.store_manager_activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
