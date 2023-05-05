@@ -1,55 +1,55 @@
 <resources>
-    <string name="app_name">FarmLink</string>
+    <string name="app_name" translatable="false">FarmLink</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
     <!--    customer strings start -->
-    <string name="TopImage">image!</string>
-    <string name="EditProfileText">Edit Profile</string>
-    <string name="Profile">Profile</string>
-    <string name="FirstNametxt">First Name</string>
-    <string name="FirstNameHint">First Name</string>
-    <string name="LastName">Last Name</string>
-    <string name="Email">Email</string>
-    <string name="ChangePassword">Forgot/Change Password</string>
-    <string name="SaveBtn">SAVE</string>
-    <string name="Logo">Logo</string>
-    <string name="whiteSpace">whiteSpace</string>
-    <string name="Title">WELCOME!!</string>
-    <string name="Description">\"Farming is a profession of HOPE\"</string>
-    <string name="GetStarted">Get Started</string>
-    <string name="LoginWelcome">Hi,Please Login</string>
-    <string name="Email1">Email</string>
-    <string name="EnterPassword">Enter your password</string>
-    <string name="Password">Password</string>
-    <string name="PleaseLogin">Hi, Please Login</string>
-    <string name="EnteryourEmail">Enter your Email</string>
-    <string name="forgotPw">Dont Remember the Password? Recover Here.</string>
-    <string name="TopImg" />
-    <string name="Or">Or Login with</string>
-    <string name="facebook" />
-    <string name="Google">Google</string>
-    <string name="Login">Login</string>
-    <string name="Google1">Google</string>
-    <string name="FacebookTxt">Facebook</string>
-    <string name="CreateAccount">Create\nAccount</string>
-    <string name="Name">Name</string>
-    <string name="EnterName">Enter your Name</string>
-    <string name="ReEnterPassword">Re-Enter Password</string>
-    <string name="RepeatPassword">Repeat the Password</string>
-    <string name="Signup">Signup</string>
-    <string name="Settings">Settings</string>
-    <string name="DeleteBtn">Delete</string>
-    <string name="WelcomeTitle">Welcome To FARMINO</string>
-    <string name="ContactNum">+94XXXXXXXX</string>
-    <string name="EditProfileBtn">Edit Profile</string>
-    <string name="Welcome_to">WELCOME To FARMLINK</string>
-    <string name="contactNumber">Contact Number</string>
-    <string name="Enterusername">Enter the username</string>
-    <string name="userName">Username</string>
-    <string name="UserName">Username</string>
-    <string name="Notamember">Not a member?</string>
-    <string name="PleaseWait">Please Wait..</string>
+    <string name="TopImage" translatable="false">image!</string>
+    <string name="EditProfileText" translatable="false">Edit Profile</string>
+    <string name="Profile" translatable="false">Profile</string>
+    <string name="FirstNametxt" translatable="false">First Name</string>
+    <string name="FirstNameHint" translatable="false">First Name</string>
+    <string name="LastName" translatable="false">Last Name</string>
+    <string name="Email" translatable="false">Email</string>
+    <string name="ChangePassword" translatable="false">Forgot/Change Password</string>
+    <string name="SaveBtn" translatable="false">SAVE</string>
+    <string name="Logo" translatable="false">Logo</string>
+    <string name="whiteSpace" translatable="false">whiteSpace</string>
+    <string name="Title" translatable="false">WELCOME!!</string>
+    <string name="Description" translatable="false">\"Farming is a profession of HOPE\"</string>
+    <string name="GetStarted" translatable="false">Get Started</string>
+    <string name="LoginWelcome" translatable="false">Hi,Please Login</string>
+    <string name="Email1" translatable="false">Email</string>
+    <string name="EnterPassword" translatable="false">Enter your password</string>
+    <string name="Password" translatable="false">Password</string>
+    <string name="PleaseLogin" translatable="false">Hi, Please Login</string>
+    <string name="EnteryourEmail" translatable="false">Enter your Email</string>
+    <string name="forgotPw" translatable="false">Dont Remember the Password? Recover Here.</string>
+    <string name="TopImg" translatable="false" />
+    <string name="Or" translatable="false">Or Login with</string>
+    <string name="facebook" translatable="false" />
+    <string name="Google" translatable="false">Google</string>
+    <string name="Login" translatable="false">Login</string>
+    <string name="Google1" translatable="false">Google</string>
+    <string name="FacebookTxt" translatable="false">Facebook</string>
+    <string name="CreateAccount" translatable="false">Create\nAccount</string>
+    <string name="Name" translatable="false">Name</string>
+    <string name="EnterName" translatable="false">Enter your Name</string>
+    <string name="ReEnterPassword" translatable="false">Re-Enter Password</string>
+    <string name="RepeatPassword" translatable="false">Repeat the Password</string>
+    <string name="Signup" translatable="false">Signup</string>
+    <string name="Settings" translatable="false">Settings</string>
+    <string name="DeleteBtn" translatable="false">Delete</string>
+    <string name="WelcomeTitle" translatable="false">Welcome To FARMINO</string>
+    <string name="ContactNum" translatable="false">+94XXXXXXXX</string>
+    <string name="EditProfileBtn" translatable="false">Edit Profile</string>
+    <string name="Welcome_to" translatable="false">WELCOME To FARMLINK</string>
+    <string name="contactNumber" translatable="false">Contact Number</string>
+    <string name="Enterusername" translatable="false">Enter the username</string>
+    <string name="userName" translatable="false">Username</string>
+    <string name="UserName" translatable="false">Username</string>
+    <string name="Notamember" translatable="false">Not a member?</string>
+    <string name="PleaseWait" translatable="false">Please Wait..</string>
     <!--    customer strings end -->
 
 </resources>

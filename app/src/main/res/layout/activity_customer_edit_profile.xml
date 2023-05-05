@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/EditProfile"
+    android:id="@+id/CustomerEditProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F6F6"
@@ -63,14 +63,13 @@
         app:layout_constraintTop_toBottomOf="@+id/TopImage"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/cusProfileEmail"
         android:layout_width="318dp"
         android:layout_height="53dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/Email"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -78,14 +77,13 @@
         app:layout_constraintTop_toBottomOf="@+id/cusProfileName"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/cusProfileUsername"
         android:layout_width="315dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/userName"
-        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
@@ -121,14 +119,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cusProfileDeleteBtn" />
 
-    <EditText
+    <TextView
         android:id="@+id/cusProfileName"
         android:layout_width="325dp"
         android:layout_height="52dp"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="@string/Name"
-        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
@@ -142,3 +139,9 @@
         android:layout_height="wrap_content"
         app:constraint_referenced_ids="TopImage,cusProfileEditText,cusProfileImg,cusProfileName,cusProfileEmail,cusProfileUsername,cusProfileChangePassword,cusProfileSaveBtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+

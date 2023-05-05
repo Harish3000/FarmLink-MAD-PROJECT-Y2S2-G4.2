@@ -27,15 +27,11 @@
         <activity
             android:name=".CustomerHomePage"
             android:exported="false" />
-        <activity
-            android:name=".CustomerSignUp"
-            android:exported="false" />
+
         <activity
             android:name=".FeedbackActivity"
             android:exported="false" />
-        <activity
-            android:name=".test"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
