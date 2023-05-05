@@ -1,4 +1,4 @@
-package com.example.farmlink.models
+package com.example.farmlink.store_manager_models
 
 class FeedbackModel (
     var userId: String? = null,

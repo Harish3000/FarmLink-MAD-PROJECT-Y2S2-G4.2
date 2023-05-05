@@ -1,16 +1,11 @@
-package com.example.farmlink.activities
+package com.example.farmlink.store_manager_activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import com.example.farmlink.models.FeedbackModel
 import com.example.farmlink.R
-import com.google.firebase.database.FirebaseDatabase
 
 class ProductDetails : AppCompatActivity() {
     private lateinit var tvSellerId: TextView
