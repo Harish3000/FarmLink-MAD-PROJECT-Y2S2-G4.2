@@ -1,13 +1,12 @@
-package com.example.farmlink.adapter
+package com.example.farmlink.store_manager_adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.farmlink.models.FeedbackModel
 import com.example.farmlink.R
-import com.example.farmlink.models.SellerModel
+import com.example.farmlink.store_manager_models.SellerModel
 
 class SellerAdapter(private val sellerList: ArrayList<SellerModel>) :
     RecyclerView.Adapter<SellerAdapter.ViewHolder>() {

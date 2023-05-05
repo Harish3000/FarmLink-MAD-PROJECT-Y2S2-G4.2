@@ -1,4 +1,4 @@
-package com.example.farmlink.activities
+package com.example.farmlink.store_manager_activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,8 +7,8 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.farmlink.adapter.FeedbackAdapter
-import com.example.farmlink.models.FeedbackModel
+import com.example.farmlink.store_manager_adapter.FeedbackAdapter
+import com.example.farmlink.store_manager_models.FeedbackModel
 import com.example.farmlink.R
 import com.google.firebase.database.*
 
