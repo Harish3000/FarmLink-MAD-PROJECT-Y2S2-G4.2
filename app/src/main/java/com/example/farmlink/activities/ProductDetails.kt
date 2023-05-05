@@ -17,13 +17,22 @@ class ProductDetails : AppCompatActivity() {
     private lateinit var tvSellerName: TextView
     private lateinit var tvRating: TextView
     private lateinit var tvDescription: TextView
-
+    private lateinit var btnToFeedback: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_details)
         initView()
         setValuesToViews()
+
+        btnToFeedback = findViewById(R.id.feedback)
+
+
+        btnToFeedback.setOnClickListener {
+            val intent = Intent(this, FeedbackActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 

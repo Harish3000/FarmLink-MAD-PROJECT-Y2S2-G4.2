@@ -1,31 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="home" />
 
     <!-- Launch test -->
-    <Button
-        android:id="@+id/my_button"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:text="Launch Activity"
-        android:layout_gravity="center_horizontal|center_vertical" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="home" />
 
     <!-- Second button -->
+
     <Button
         android:id="@+id/my_button2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:text="Button 2" />
+        android:layout_height="58dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="520dp"
+        android:background="@drawable/round_button"
+        android:text="Start Shopping 🛍️🛍️"
+        android:textSize="17dp" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="338dp"
+        android:layout_height="178dp"
+        android:src="@drawable/backroundshape" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="360dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/bannerpic3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.679" />
 
 </FrameLayout>

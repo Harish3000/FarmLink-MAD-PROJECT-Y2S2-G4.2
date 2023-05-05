@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activities.ProductPageActivity">
 
-    <TextView
-        android:id="@+id/tvLoadingData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loading Data....."
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSeller"
         android:layout_width="387dp"
@@ -28,7 +14,7 @@
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -38,24 +24,29 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
         android:text="Find your farm"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/rvSeller"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.643" />
+
 
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/homebg"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-2dp" />
-
+        android:layout_marginBottom="516dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rvSeller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homebg" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -87,14 +78,61 @@
         app:layout_constraintVertical_bias="0.078" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:layout_width="243dp"
-        android:layout_height="203dp"
-        android:src="@drawable/grocerybag"
+        android:id="@+id/gifImageView2"
+        android:layout_width="234dp"
+        android:layout_height="205dp"
+        android:src="@drawable/bannerpic"
         app:layout_constraintBottom_toBottomOf="@+id/rvSeller"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+        app:layout_constraintVertical_bias="0.472" />
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="50dp"
+        android:layout_height="58dp"
+        android:src="@drawable/carrot"
+        app:layout_constraintBottom_toBottomOf="@+id/rvSeller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="75dp"
+        android:layout_height="64dp"
+        android:src="@drawable/cabbage"
+        app:layout_constraintBottom_toBottomOf="@+id/rvSeller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="44dp"
+        android:layout_height="40dp"
+        android:src="@drawable/beetroot"
+        app:layout_constraintBottom_toBottomOf="@+id/rvSeller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="47dp"
+        android:layout_height="50dp"
+        android:src="@drawable/cucmber"
+        app:layout_constraintBottom_toBottomOf="@+id/rvSeller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -107,5 +145,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/tvLoadingData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading Data....."
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.764" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
