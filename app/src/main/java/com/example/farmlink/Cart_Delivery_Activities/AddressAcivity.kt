@@ -3,6 +3,7 @@ package com.example.farmlink.Cart_Delivery_Activities
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.farmlink.Cart_Delivery_Modals.AddressData
@@ -19,6 +20,7 @@ class AddressAcivity : AppCompatActivity() {
     private lateinit var edtDistrict : EditText
     private lateinit var edtPhone : EditText
     private lateinit var btnSaveData : Button
+    private lateinit var btnBack: ImageView
 
     private lateinit var dbRef : DatabaseReference
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +34,9 @@ class AddressAcivity : AppCompatActivity() {
         edtDistrict = findViewById(R.id.editDistrict)
         edtPhone = findViewById(R.id.editPhone)
         btnSaveData = findViewById(R.id.btnUpdate)
+
+        btnBack = findViewById(R.id.btn_back)
+        btnBack!!.setOnClickListener{ finish() }
 
         dbRef = FirebaseDatabase.getInstance().getReference("Addresses")
 
@@ -69,22 +74,31 @@ class AddressAcivity : AppCompatActivity() {
             edtPhone.error = "Please enter your phone number"
         }
 
-        val addressId = dbRef.push().key!!
+        if(fullName.isEmpty()!= true &&
+            addressLine1.isEmpty()!= true &&
+            city.isEmpty()!= true &&
+            district.isEmpty()!= true &&
+            phone.isEmpty()!= true)
+        {
+            val addressId = dbRef.push().key!!
 
-        val address = AddressData(addressId, fullName, addressLine1, addressLine2, city, district, phone)
+            val address = AddressData(addressId, fullName, addressLine1, addressLine2, city, district, phone)
 
-        dbRef.child(addressId).setValue(address)
-            .addOnCompleteListener {
-                Toast.makeText(this, "Address Inserted Successfully", Toast.LENGTH_LONG).show()
-                edtFullName.text.clear()
-                edtAddressLine1.text.clear()
-                edtAddressLine2.text.clear()
-                edtCity.text.clear()
-                edtDistrict.text.clear()
-                edtPhone.text.clear()
+            dbRef.child(addressId).setValue(address)
+                .addOnCompleteListener {
+                    Toast.makeText(this, "Address Inserted Successfully", Toast.LENGTH_LONG).show()
+                    edtFullName.text.clear()
+                    edtAddressLine1.text.clear()
+                    edtAddressLine2.text.clear()
+                    edtCity.text.clear()
+                    edtDistrict.text.clear()
+                    edtPhone.text.clear()
 
-            }.addOnFailureListener { err ->
-                Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
-            }
+                }.addOnFailureListener { err ->
+                    Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
+                }
+
+        }
+
     }
 }

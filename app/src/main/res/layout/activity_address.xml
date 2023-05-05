@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/addressLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1">
 
     <EditText
         android:id="@+id/editFullName"
@@ -14,6 +15,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editFullName"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +30,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editAddress1"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +45,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editAddress2"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +59,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editCity"
         android:inputType="textPostalAddress"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +73,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editDistrict"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +88,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editPhone"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,13 +116,15 @@
             app:srcCompat="@drawable/close_btn" />
 
         <TextView
-            android:id="@+id/tvCart"
+            android:id="@+id/tvOrder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="7"
+            android:fontFamily="@font/poppins_thin"
             android:gravity="center|center_horizontal|center_vertical"
             android:text="@string/tvAddress"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -138,7 +147,8 @@
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:backgroundTint="#185328"
+            android:backgroundTint="@color/forest_green"
+            android:fontFamily="@font/sf_pro_display"
             android:text="@string/btnSave"
             android:textSize="20sp"
             android:textStyle="bold" />

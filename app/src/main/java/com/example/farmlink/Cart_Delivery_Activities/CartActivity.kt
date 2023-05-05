@@ -87,6 +87,7 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         btn_back!!.setOnClickListener{ finish() }
         btnCheckout.setOnClickListener {
             val intent = Intent(this, BillingActivity::class.java)
+            intent.putExtra("total", txtTotal.text.toString())
             startActivity(intent)
         }
     }

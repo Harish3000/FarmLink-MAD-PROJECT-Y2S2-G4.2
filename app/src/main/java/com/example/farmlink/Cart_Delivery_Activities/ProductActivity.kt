@@ -151,7 +151,7 @@ class ProductActivity : AppCompatActivity(), IDrinkLoadListener, ICartLoadListen
 
     override fun onLoadCartFailed(message: String?) {
 //        Snackbar.make(, message!!, Snackbar.LENGTH_LONG).show()
-        Toast.makeText(this, "Error ${message}", Toast.LENGTH_LONG).show()
+        Toast.makeText(this, "${message}", Toast.LENGTH_LONG).show()
         print(message)
     }
 }

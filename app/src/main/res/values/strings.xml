@@ -27,4 +27,6 @@
     <string name="tvAddressDetails">Address Details</string>
     <string name="tvCart">My Cart</string>
     <string name="btnOrder">PLACE ORDER</string>
+    <string name="btnConfirm">Confirm</string>
+    <string name="btnHome">Go Home</string>
 </resources>

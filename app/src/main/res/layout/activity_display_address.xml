@@ -5,6 +5,7 @@
     android:id="@+id/productLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     tools:context=".Cart_Delivery_Activities.AddressDetailsActivity">
 
     <LinearLayout
@@ -27,13 +28,15 @@
             app:srcCompat="@drawable/close_btn" />
 
         <TextView
-            android:id="@+id/tvCart"
+            android:id="@+id/tvOrder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="7"
+            android:fontFamily="@font/poppins_thin"
             android:gravity="center|center_horizontal|center_vertical"
             android:text="@string/tvAddressDetails"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -58,6 +61,7 @@
             android:layout_marginRight="15sp"
             android:layout_weight="2"
             android:backgroundTint="#E80E0E"
+            android:fontFamily="@font/sf_pro_display"
             android:text="@string/btnDelete"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -68,6 +72,7 @@
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:backgroundTint="#185328"
+            android:fontFamily="@font/sf_pro_display"
             android:text="@string/btnUpdate"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -107,6 +112,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvAddressId"
                     android:textColor="@color/black"
@@ -124,12 +130,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -155,6 +161,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvFullName"
                     android:textColor="@color/black"
@@ -172,12 +179,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -204,13 +211,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvAddress1"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -224,12 +231,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -258,13 +265,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvAddress2"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -278,12 +285,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -311,13 +318,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvCity"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -331,12 +338,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -364,13 +371,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvDistrict"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -384,12 +391,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -417,13 +424,13 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
+                    android:fontFamily="@font/poppins_thin"
                     android:gravity="center"
                     android:text="@string/tvPhone"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
@@ -437,12 +444,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_light"
                     android:gravity="center"
                     android:text=""
                     android:textColor="@color/black"
-                    android:textSize="15sp"
 
-                    />
+                    android:textSize="15sp" />
 
             </LinearLayout>
 

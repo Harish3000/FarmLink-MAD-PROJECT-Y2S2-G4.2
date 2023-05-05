@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -23,6 +24,7 @@ class AddressDetailsActivity : AppCompatActivity() {
     private lateinit var tvPhone: TextView
     private lateinit var btnUpdate: Button
     private lateinit var btnDelete: Button
+    private lateinit var btnBack: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,9 @@ class AddressDetailsActivity : AppCompatActivity() {
                 intent.getStringExtra("addressId").toString(),
             )
         }
+
+        btnBack = findViewById(R.id.btn_back)
+        btnBack!!.setOnClickListener{ finish() }
     }
 
     private fun initView(){

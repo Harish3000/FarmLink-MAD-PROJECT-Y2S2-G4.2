@@ -1,11 +1,11 @@
 package com.example.farmlink.Cart_Delivery_Activities
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +21,7 @@ class BillingActivity : AppCompatActivity() {
     private lateinit var btnAddAddresses: ImageView
     private lateinit var btn_back: ImageView
     private lateinit var btnOrder: Button
+    private lateinit var txtTotal: TextView
     private lateinit var addressList: ArrayList<AddressData>
     private lateinit var dbRef: DatabaseReference
 
@@ -28,11 +29,15 @@ class BillingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_billing)
 
-        addressRecyclerView = findViewById(R.id.rvAddresses)
-        addressRecyclerView.layoutManager = LinearLayoutManager(this)
+        addressRecyclerView = findViewById(R.id.rvProducts)
+        addressRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         addressRecyclerView.setHasFixedSize(true)
 
         addressList = arrayListOf<AddressData>()
+
+        txtTotal = findViewById(R.id.txtTotal)
+        val total = intent.getStringExtra("total")
+        txtTotal.text = total
 
         btnAddAddresses = findViewById(R.id.btnAddAddresses)
         btnAddAddresses.setOnClickListener{
@@ -43,10 +48,11 @@ class BillingActivity : AppCompatActivity() {
         btn_back = findViewById(R.id.btn_back)
         btn_back.setOnClickListener{ finish() }
 
-//        btnOrder = findViewById(R.id.btnOrder)
-//        btnOrder.setOnClickListener {
-//            var intent = Intent(this, )
-//        }
+        btnOrder = findViewById(R.id.btnOrder)
+        btnOrder.setOnClickListener {
+            val intent = Intent(this, SuccessDeliveryActivity::class.java)
+            startActivity(intent)
+        }
 
         getAddressData()
     }
@@ -83,6 +89,24 @@ class BillingActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
                     })
+
+                    if (addressList.isNotEmpty()) {
+                        // Set the textviews to display the details of the first address in the list
+                        var selectedAddress = addressList[0]
+                        //to display address
+                        val tvFullName = findViewById<TextView>(R.id.tvFullName2)
+                        val tvAddressLine1 = findViewById<TextView>(R.id.tvAddressLine1b)
+                        val tvAddressLine2 = findViewById<TextView>(R.id.tvAddressLine2b)
+                        val tvCity = findViewById<TextView>(R.id.tvCity2)
+                        val tvDistrict = findViewById<TextView>(R.id.tvDistrict2)
+                        val tvPhone = findViewById<TextView>(R.id.tvPhone2)
+                        tvFullName.text = selectedAddress!!.fullName
+                        tvAddressLine1.text = selectedAddress!!.addressLine1
+                        tvAddressLine2.text = selectedAddress!!.addressLine2
+                        tvCity.text = selectedAddress!!.city
+                        tvDistrict.text = selectedAddress!!.district
+                        tvPhone.text = selectedAddress!!.phone
+                    }
 
                     addressRecyclerView.visibility = View.VISIBLE
 

@@ -32,6 +32,8 @@
         <activity android:name=".Cart_Delivery_Activities.AddressDetailsActivity" android:exported="false" />
         <activity android:name=".Cart_Delivery_Activities.ProductActivity" android:exported="false" />
         <activity android:name=".Cart_Delivery_Activities.CartActivity" android:exported="false" />
+        <activity android:name=".Cart_Delivery_Activities.SuccessDeliveryActivity" android:exported="false" />
+        <activity android:name=".Cart_Delivery_Activities.ActivityPlaceOrder" android:exported="false" />
     </application>
 
 </manifest>

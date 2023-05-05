@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg1"
     android:orientation="vertical">
 
     <EditText
@@ -13,6 +14,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editFullName"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,6 +29,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editAddress1"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +44,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editAddress2"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,6 +59,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editCity"
         android:inputType="textPostalAddress"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +73,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editDistrict"
         android:inputType="textPostalAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +88,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
+        android:fontFamily="@font/poppins_light"
         android:hint="@string/editPhone"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,10 +99,14 @@
     <Button
         android:id="@+id/btnUpdateData"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
-        android:text="@string/btnUpdate" />
+        android:backgroundTint="@color/forest_green"
+        android:fontFamily="@font/sf_pro_display"
+        android:text="@string/btnUpdate"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </LinearLayout>
