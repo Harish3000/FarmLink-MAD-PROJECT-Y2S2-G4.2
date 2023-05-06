@@ -65,7 +65,7 @@ class MyDrinkAdapter(
             .load(list[position].image)
             .into(holder.imageView!!)
         holder.txtName!!.text = StringBuilder().append(list[position].name)
-        holder.txtPrice!!.text = StringBuilder("$").append(list[position].price)
+        holder.txtPrice!!.text = StringBuilder("Rs.").append(list[position].price)
 
         holder.setClickListener(object:IRecyclerClickListener{
             override fun onItemClickListener(view: View?, position: Int) {

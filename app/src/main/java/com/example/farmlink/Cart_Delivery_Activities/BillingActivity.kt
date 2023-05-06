@@ -1,5 +1,6 @@
 package com.example.farmlink.Cart_Delivery_Activities
 
+
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -13,6 +14,7 @@ import com.example.farmlink.Cart_Delivery_Adapters.AddressAdapter
 import com.example.farmlink.Cart_Delivery_Modals.AddressData
 import com.example.farmlink.R
 import com.google.firebase.database.*
+
 
 
 class BillingActivity : AppCompatActivity() {
@@ -48,8 +50,12 @@ class BillingActivity : AppCompatActivity() {
         btn_back = findViewById(R.id.btn_back)
         btn_back.setOnClickListener{ finish() }
 
+        // initialize the database reference to the "Cart" node
+//        dbRef = FirebaseDatabase.getInstance().getReference("Cart").child("Unique_User_Id")
+
         btnOrder = findViewById(R.id.btnOrder)
         btnOrder.setOnClickListener {
+
             val intent = Intent(this, SuccessDeliveryActivity::class.java)
             startActivity(intent)
         }

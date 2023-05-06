@@ -23,21 +23,23 @@
 
         <TextView
             android:id="@+id/txtPrice"
-            android:text="$1.0"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_gravity="start"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/sf_pro_display"
+            android:text="Rs.1.0"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtName"
-            android:text="Name of Drink"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="start"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Name of Product"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
