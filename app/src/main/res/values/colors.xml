@@ -17,4 +17,16 @@
     <color name="emerald_green">#4FC978</color>
     <color name="forest_green">#0A6522</color>
 
+<!--    customer colors-->
+    <color name="divider_grey">#D1CFD1</color>
+    <color name="primary">#B7CAA2</color>
+    <color name="Secondary">#068051</color>
+    <color name="night_mode">#6124B1</color>
+    <color name="notification">#13B2C3</color>
+    <color name="All_orders">#2196F3</color>
+    <color name="track_orders">#9F9999</color>
+    <color name="Billing_and__addressing">#E6A326</color>
+    <color name="language">#8024B1</color>
+    <color name="Logout">#D95F69</color>
+
 </resources>
