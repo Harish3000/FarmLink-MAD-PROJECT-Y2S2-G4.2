@@ -13,4 +13,19 @@
         <item name="android:statusBarColor">@color/bottom_nav_selected_item</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.FinalFarmLinkApp" parent="Base.Theme.FinalFarmLinkApp" />
+
+    <!--    theme style for nightMode switch-->
+    <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:colorForeground">#28737373</item>
+    </style>
+    <!--    theme style for notification switch-->
+    <style name="notificationCheckbox" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/notification</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF</item>
+        <item name="android:colorForeground">#22737373</item>
+    </style>
 </resources>
