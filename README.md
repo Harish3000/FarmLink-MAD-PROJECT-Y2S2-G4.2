@@ -4,11 +4,11 @@
 
 an android application project for Year-2 created to connect farmers with customers
 
-Function n1
+Store Manager Function </br>
 
-Student ID:
-Name:
-Function:
+Student ID: IT21289316 </br>
+Name: Harish.B
+Function: Store Manager Function </br>
 
 Cart and Delivery Function </br>
 
