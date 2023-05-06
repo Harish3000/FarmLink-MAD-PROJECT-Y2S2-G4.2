@@ -7,7 +7,7 @@ an android application project for Year-2 created to connect farmers with custom
 Store Manager Function </br>
 
 Student ID: IT21289316 </br>
-Name: Harish.B
+Name: Harish.B  </br>
 Function: Store Manager Function </br>
 
 Cart and Delivery Function </br>
