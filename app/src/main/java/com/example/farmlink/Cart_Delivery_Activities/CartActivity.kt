@@ -97,7 +97,7 @@ class CartActivity : AppCompatActivity(), ICartLoadListener {
         for (cartModel in cartModelList!!){
             sum += cartModel!!.totalPrice
         }
-        txtTotal.text = StringBuilder("$").append(sum)
+        txtTotal.text = StringBuilder("Rs.").append(sum)
         val adapter = MyCartAdapter(this,cartModelList)
         recycler_cart!!.adapter = adapter
     }
