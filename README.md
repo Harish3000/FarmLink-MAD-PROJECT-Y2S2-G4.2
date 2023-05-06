@@ -27,7 +27,7 @@ Farmer Managemnt Function <br/>
 
 Student ID: IT21272240	<br/>
 Name: Perera K.P.R.T <br/>
-Function: Farmer management Function <br/>
+Function: Farmer Management Function <br/>
 
 
 
