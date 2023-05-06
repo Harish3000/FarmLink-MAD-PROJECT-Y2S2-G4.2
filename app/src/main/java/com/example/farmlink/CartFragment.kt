@@ -1,10 +1,16 @@
 package com.example.farmlink
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import com.example.farmlink.Cart_Delivery_Activities.AddressAcivity
+import com.example.farmlink.Cart_Delivery_Activities.BillingActivity
+import com.example.farmlink.Cart_Delivery_Activities.ProductActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,13 +35,13 @@ class CartFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
-    }
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        // Inflate the layout for this fragment
+//        return inflater.inflate(R.layout.fragment_cart, container, false)
+//    }
 
     companion object {
         /**
@@ -55,5 +61,30 @@ class CartFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        val view = inflater.inflate(R.layout.fragment_cart, container, false)
+
+        val button = view.findViewById<Button>(R.id.btn_checkout)
+        button.setOnClickListener {
+            val intent = Intent(activity, AddressAcivity::class.java)
+            startActivity(intent)
+        }
+
+        val button2 = view.findViewById<Button>(R.id.btn_billing)
+        button2.setOnClickListener {
+            val intent = Intent(activity, BillingActivity::class.java)
+            startActivity(intent)
+        }
+
+        val button3 = view.findViewById<Button>(R.id.btnProducts)
+        button3.setOnClickListener {
+            val intent = Intent(activity, ProductActivity::class.java)
+            startActivity(intent)
+        }
+
+        return view
     }
 }
