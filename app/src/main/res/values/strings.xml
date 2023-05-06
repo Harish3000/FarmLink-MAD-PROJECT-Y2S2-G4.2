@@ -2,6 +2,12 @@
     <string name="app_name">FarmLink</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Feedback_Submission">Feedback Submission</string>
+    <string name="Feedback_Descriiption">Please submit your reviews and complaints here, our team will reach you through email soon.</string>
+    <string name="Submit_Feedback">Submit Feedback</string>
+    <string name="past_feedbacks">🌟 My Feedbacks 🌟</string>
+    <string name="deals">The Best Deals Today</string>
+    <string name="Welcome">Welcome </string>
     <string name="btn_checkout">Checkout</string>
     <string name="editFullName">Full Name</string>
     <string name="editAddress1">Address Line 1</string>
