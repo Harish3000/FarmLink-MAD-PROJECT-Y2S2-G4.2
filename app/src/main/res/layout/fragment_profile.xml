@@ -21,5 +21,4 @@
         android:layout_gravity="center_horizontal|center_vertical"
         android:text="@string/LetsGo" />
 
-
 </FrameLayout>

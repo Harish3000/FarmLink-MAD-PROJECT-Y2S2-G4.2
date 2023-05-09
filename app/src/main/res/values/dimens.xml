@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="cardview_custom_radius">10dp</dimen>
-
-<!--    customer dimens-->
     <dimen name="EditProfileTitle">35sp</dimen>
     <dimen name="ForgetPw">14sp</dimen>
     <dimen name="SaveBtn">14sp</dimen>
@@ -30,3 +27,4 @@
     <dimen name="CreateAccountInputValues">18sp</dimen>
     <dimen name="SignUpBtn">25sp</dimen>
 </resources>
+
