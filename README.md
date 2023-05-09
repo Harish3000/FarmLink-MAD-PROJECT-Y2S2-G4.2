@@ -19,7 +19,7 @@ Function: Cart and Delivery Function </br>
 Customer Management Function <br/>
 
 Student ID: IT21269134 <br/>
-Name:K.G.I.H.C.Kumbukgolla <br/>
+Name:K.G.I.H.C.Kumbukgolla.. <br/>
 Function:Customer Management Function <br/>
 
 Farmer Managemnt Function <br/>
