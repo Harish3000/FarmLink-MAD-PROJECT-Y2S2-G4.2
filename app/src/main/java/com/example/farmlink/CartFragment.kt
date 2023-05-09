@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.farmlink.Cart_Delivery_Activities.AddressAcivity
 import com.example.farmlink.Cart_Delivery_Activities.BillingActivity
+import com.example.farmlink.Cart_Delivery_Activities.CartActivity
 import com.example.farmlink.Cart_Delivery_Activities.ProductActivity
 
 // TODO: Rename parameter arguments, choose names that match
@@ -67,23 +68,22 @@ class CartFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_cart, container, false)
 
-        val button = view.findViewById<Button>(R.id.btn_checkout)
-        button.setOnClickListener {
-            val intent = Intent(activity, AddressAcivity::class.java)
+
+
+        val button2 = view.findViewById<Button>(R.id.btn_viewCart)
+        button2.setOnClickListener {
+            val intent = Intent(activity, CartActivity::class.java)
             startActivity(intent)
         }
 
-        val button2 = view.findViewById<Button>(R.id.btn_billing)
-        button2.setOnClickListener {
+
+        val button3 = view.findViewById<Button>(R.id.btn_order)
+        button3.setOnClickListener {
             val intent = Intent(activity, BillingActivity::class.java)
             startActivity(intent)
         }
 
-        val button3 = view.findViewById<Button>(R.id.btnProducts)
-        button3.setOnClickListener {
-            val intent = Intent(activity, ProductActivity::class.java)
-            startActivity(intent)
-        }
+
 
         return view
     }
