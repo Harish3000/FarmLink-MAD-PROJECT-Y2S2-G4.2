@@ -2,20 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="29" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FarmLink"
+        android:theme="@style/Theme.FinalFarmLinkApp"
         tools:targetApi="31">
         <activity
-            android:name=".FeedbackActivity"
+            android:name=".Customer_activities.CustomerDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Customer_activities.CustomerFetchData"
+            android:exported="false" />
+        <activity
+            android:name=".Customer_activities.CustomerRegister"
+            android:exported="false" />
+        <activity
+            android:name=".Customer_activities.GetStarted"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -26,14 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Cart_Delivery_Activities.AddressAcivity" android:exported="false" />
-        <activity android:name=".Cart_Delivery_Activities.BillingActivity" android:exported="false" />
-        <activity android:name=".Cart_Delivery_Activities.AddressDetailsActivity" android:exported="false" />
-        <activity android:name=".Cart_Delivery_Activities.ProductActivity" android:exported="false" />
-        <activity android:name=".Cart_Delivery_Activities.CartActivity" android:exported="false" />
-        <activity android:name=".Cart_Delivery_Activities.SuccessDeliveryActivity" android:exported="false" />
-        <activity android:name=".Cart_Delivery_Activities.ActivityPlaceOrder" android:exported="false" />
-
     </application>
 
 </manifest>

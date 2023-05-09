@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.FarmLink" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Base.Theme.FinalFarmLinkApp" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -10,7 +11,7 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/bottom_nav_selected_item</item>
+        <item name="android:statusBarColor">@color/purple_500</item>
         <!-- Customize your theme here. -->
     </style>
 
