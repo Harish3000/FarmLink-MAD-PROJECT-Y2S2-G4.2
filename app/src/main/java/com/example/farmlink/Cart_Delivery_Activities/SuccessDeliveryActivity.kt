@@ -16,7 +16,9 @@ class SuccessDeliveryActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cartdelivery_success)
 
         btnHome = findViewById(R.id.btnHome)
+//        btnHome.setOnClickListener {
 //        val intent = Intent(this, HomeFragment::class.java)
 //        startActivity(intent)
+//        }
     }
 }
