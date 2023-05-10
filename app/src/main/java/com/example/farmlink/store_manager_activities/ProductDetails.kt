@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.farmlink.Cart_Delivery_Activities.ProductActivity
 import com.example.farmlink.R
 
 class ProductDetails : AppCompatActivity() {
@@ -13,6 +14,7 @@ class ProductDetails : AppCompatActivity() {
     private lateinit var tvRating: TextView
     private lateinit var tvDescription: TextView
     private lateinit var btnToFeedback: Button
+    private lateinit var btnToProducts: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +23,15 @@ class ProductDetails : AppCompatActivity() {
         setValuesToViews()
 
         btnToFeedback = findViewById(R.id.feedback)
+        btnToProducts = findViewById(R.id.products)
 
 
         btnToFeedback.setOnClickListener {
             val intent = Intent(this, FeedbackActivity::class.java)
+            startActivity(intent)
+        }
+        btnToProducts.setOnClickListener {
+            val intent = Intent(this, ProductActivity::class.java)
             startActivity(intent)
         }
 

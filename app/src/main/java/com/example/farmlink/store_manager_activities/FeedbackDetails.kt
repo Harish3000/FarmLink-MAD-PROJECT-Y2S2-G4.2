@@ -1,15 +1,16 @@
 package com.example.farmlink.store_manager_activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.example.farmlink.store_manager_models.FeedbackModel
+import androidx.appcompat.app.AppCompatActivity
 import com.example.farmlink.R
+import com.example.farmlink.store_manager_models.FeedbackModel
 import com.google.firebase.database.FirebaseDatabase
 
 class FeedbackDetails : AppCompatActivity() {
@@ -32,11 +33,12 @@ class FeedbackDetails : AppCompatActivity() {
             )
         }
         btnDelete.setOnClickListener {
-            deleteRecord(
+            confirmDeletion(
                 intent.getStringExtra("userId").toString()
             )
         }
     }
+
     private fun openUpdateDialog(
         userId: String,
         userName: String
@@ -63,19 +65,40 @@ class FeedbackDetails : AppCompatActivity() {
         alertDialog.show()
 
         btnUpdateData.setOnClickListener {
+            val name = etuserName.text.toString().trim()
+            val email = etEmail.text.toString().trim()
+            val description = etDescription.text.toString().trim()
+
+            if (name.isEmpty()) {
+                Toast.makeText(applicationContext, "Please enter a name", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+            if (email.isEmpty()) {
+                Toast.makeText(applicationContext, "Please enter an email", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(applicationContext, "Please enter a valid email", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+            if (description.isEmpty()) {
+                Toast.makeText(applicationContext, "Please enter a description", Toast.LENGTH_LONG).show()
+                return@setOnClickListener
+            }
+
             updateUserData(
                 userId,
-                etuserName.text.toString(),
-                etEmail.text.toString(),
-                etDescription.text.toString()
+                name,
+                email,
+                description
             )
 
             Toast.makeText(applicationContext, "FeedbackData Updated", Toast.LENGTH_LONG).show()
 
             //we are setting updated data to our textviews
-            tvUserName.text = etuserName.text.toString()
-            tvEmail.text = etEmail.text.toString()
-            tvDescription.text = etDescription.text.toString()
+            tvUserName.text = name
+            tvEmail.text = email
+            tvDescription.text = description
 
             alertDialog.dismiss()
         }
@@ -92,22 +115,38 @@ class FeedbackDetails : AppCompatActivity() {
         dbRef.setValue(userInfo)
     }
 
-    private fun deleteRecord(
+    private fun confirmDeletion(
         id: String
-    ){
+    ) {
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setMessage("Are you sure you want to delete this record?")
+            .setCancelable(false)
+            .setPositiveButton("Yes") { dialog, _ ->
+                deleteRecord(id)
+                dialog.dismiss()
+            }
+            .setNegativeButton("No") { dialog, _ -> dialog.dismiss() }
+        val alert = dialogBuilder.create()
+        alert.show()
+    }
+
+    private fun deleteRecord(id: String) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Feedback").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Feedbackdata deleted", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Feedback data deleted", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, FeedbackFetch::class.java)
-            finish()
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Clear the activity stack
+            finish() // Finish the current activity
             startActivity(intent)
-        }.addOnFailureListener{ error ->
+        }.addOnFailureListener { error ->
             Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
         }
     }
+
+
     private fun initView() {
         tvUserId = findViewById(R.id.tvUserId)
         tvUserName = findViewById(R.id.tvUserName)

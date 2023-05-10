@@ -32,24 +32,29 @@ class FeedbackInsert : AppCompatActivity() {
 
         btnSaveData.setOnClickListener {
             saveFeedbackData()
+        }
     }
-}
 
     private fun saveFeedbackData() {
-
-        //getting values
-        val userName = etuserName.text.toString()
-        val email = etEmail.text.toString()
-        val description = etDescription.text.toString()
+        val userName = etuserName.text.toString().trim()
+        val email = etEmail.text.toString().trim()
+        val description = etDescription.text.toString().trim()
 
         if (userName.isEmpty()) {
-            etuserName.error = "Please enter your Name "
+            etuserName.error = "Please enter your Name"
+            return
         }
         if (email.isEmpty()) {
             etEmail.error = "Please enter email"
+            return
+        }
+        if (!isValidEmail(email)) {
+            etEmail.error = "Please enter a valid email address"
+            return
         }
         if (description.isEmpty()) {
             etDescription.error = "Please enter description"
+            return
         }
 
         val userId = dbRef.push().key!!
@@ -68,11 +73,13 @@ class FeedbackInsert : AppCompatActivity() {
                 finish()
                 startActivity(intent)
 
-
             }.addOnFailureListener { err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
-
     }
 
+    private fun isValidEmail(email: String): Boolean {
+        val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+        return email.matches(emailPattern.toRegex())
+    }
 }
