@@ -1,4 +1,21 @@
 *.iml
+.idea/
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services (e.g. APIs or Firebase)
+google-services.json
+
+# Android Profiling
+*.hprof
+
+
+
+#Android Studio generated files
+
+*.iml
 .gradle
 /local.properties
 /.idea/caches
