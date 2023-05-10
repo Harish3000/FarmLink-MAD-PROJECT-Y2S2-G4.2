@@ -1,4 +1,4 @@
-package com.example.finalfarmlinkapp.Customer_activities
+package com.example.farmlink.Customer_activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,9 +7,9 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalfarmlinkapp.Customer_models.CustomerModel
-import com.example.finalfarmlinkapp.Customer_adapters.CustomerAdapter
-import com.example.finalfarmlinkapp.R
+import com.example.farmlink.R
+import com.example.farmlink.Customer_models.CustomerModel
+import com.example.farmlink.Customer_adapters.CustomerAdapter
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference

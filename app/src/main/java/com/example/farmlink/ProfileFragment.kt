@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.finalfarmlinkapp.Customer_activities.GetStarted
+import com.example.farmlink.Customer_activities.CustomerRegister
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -65,7 +66,7 @@ class ProfileFragment : Fragment() {
 
         val button = view.findViewById<Button>(R.id.my_button)
         button.setOnClickListener {
-            val intent = Intent(activity, GetStarted::class.java)
+            val intent = Intent(activity, CustomerRegister::class.java)
             startActivity(intent)
         }
 

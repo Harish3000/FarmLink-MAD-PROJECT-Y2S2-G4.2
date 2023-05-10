@@ -1,10 +1,11 @@
-package com.example.finalfarmlinkapp.Customer_activities
+package com.example.farmlink.Customer_activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.finalfarmlinkapp.R
+import com.example.farmlink.R
+
 
 class GetStarted : AppCompatActivity() {
     private lateinit var btnGetStarted: Button

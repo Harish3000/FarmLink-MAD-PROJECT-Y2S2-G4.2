@@ -1,4 +1,4 @@
-package com.example.finalfarmlinkapp.Customer_models
+package com.example.farmlink.Customer_models
 
 data class CustomerModel(
     var cusId:String?=null,

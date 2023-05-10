@@ -1,12 +1,14 @@
-package com.example.finalfarmlinkapp.Customer_adapters
+package com.example.farmlink.Customer_adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.finalfarmlinkapp.Customer_models.CustomerModel
-import com.example.finalfarmlinkapp.R
+import com.example.farmlink.R
+import com.example.farmlink.Customer_models.CustomerModel
+
+
 
 class CustomerAdapter (private val cusList:ArrayList<CustomerModel>)
     :RecyclerView.Adapter<CustomerAdapter.ViewHolder>(){
@@ -35,7 +37,7 @@ class CustomerAdapter (private val cusList:ArrayList<CustomerModel>)
     }
 
     override fun getItemCount(): Int {
-      return cusList.size
+        return cusList.size
     }
 
     class ViewHolder(cusView: View,clickListener: onProfileClickListener) :RecyclerView.ViewHolder(cusView){
