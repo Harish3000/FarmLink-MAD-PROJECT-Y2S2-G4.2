@@ -3,20 +3,18 @@ package com.example.farmlink.Cart_Delivery_Activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.farmlink.Cart_Delivery_Adapters.MyDrinkAdapter
+import com.example.farmlink.Cart_Delivery_Adapters.MyProductAdapter
 import com.example.farmlink.Cart_Delivery_Eventbus.UpdateCartEvent
 import com.example.farmlink.Cart_Delivery_Modals.CartModel
-import com.example.farmlink.Cart_Delivery_Modals.DrinkModel
+import com.example.farmlink.Cart_Delivery_Modals.ProductDataModel
 import com.example.farmlink.Cart_Delivery_Utils.SpaceItemDecoration
 import com.example.farmlink.R
 import com.example.farmlink.listener.ICartLoadListener
 import com.example.farmlink.listener.IDrinkLoadListener
-import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -85,7 +83,7 @@ class ProductActivity : AppCompatActivity(), IDrinkLoadListener, ICartLoadListen
 
 
     private fun LoadDrinkFromFirebase() {
-        val drinkModels : MutableList<DrinkModel> = ArrayList()
+        val drinkModels : MutableList<ProductDataModel> = ArrayList()
         FirebaseDatabase.getInstance().getReference("Drink")
             .addListenerForSingleValueEvent(object:ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -93,7 +91,7 @@ class ProductActivity : AppCompatActivity(), IDrinkLoadListener, ICartLoadListen
                     {
                         for (drinkSnapshot in snapshot.children)
                         {
-                            val drinkModel = drinkSnapshot.getValue(DrinkModel::class.java)
+                            val drinkModel = drinkSnapshot.getValue(ProductDataModel::class.java)
                             drinkModel!!.key = drinkSnapshot.key
                             drinkModels.add(drinkModel)
                         }
@@ -123,8 +121,8 @@ class ProductActivity : AppCompatActivity(), IDrinkLoadListener, ICartLoadListen
         btnCart.setOnClickListener{ startActivity(Intent(this, CartActivity::class.java))}
     }
 
-    override fun onDrinkLoadSuccess(drinkModelList: List<DrinkModel>?) {
-        val adapter = MyDrinkAdapter(this,drinkModelList!!, cartLoadListener)
+    override fun onDrinkLoadSuccess(drinkModelList: List<ProductDataModel>?) {
+        val adapter = MyProductAdapter(this,drinkModelList!!, cartLoadListener)
         recycler_drink.adapter = adapter
     }
 //    override fun onDrinkLoadSuccess(drinkModelList: List<DrinkModel>?) {
