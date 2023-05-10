@@ -130,22 +130,22 @@ class FeedbackDetails : AppCompatActivity() {
         alert.show()
     }
 
-    private fun deleteRecord(
-        id: String
-    ) {
+    private fun deleteRecord(id: String) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Feedback").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Feedbackdata deleted", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Feedback data deleted", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, FeedbackFetch::class.java)
-            finish()
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // Clear the activity stack
+            finish() // Finish the current activity
             startActivity(intent)
         }.addOnFailureListener { error ->
             Toast.makeText(this, "Deleting Err ${error.message}", Toast.LENGTH_LONG).show()
         }
     }
+
 
     private fun initView() {
         tvUserId = findViewById(R.id.tvUserId)
