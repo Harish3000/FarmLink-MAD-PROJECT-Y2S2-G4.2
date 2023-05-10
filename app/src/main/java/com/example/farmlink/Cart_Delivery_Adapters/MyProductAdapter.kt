@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.farmlink.Cart_Delivery_Eventbus.UpdateCartEvent
 import com.example.farmlink.Cart_Delivery_Modals.CartModel
-import com.example.farmlink.Cart_Delivery_Modals.DrinkModel
+import com.example.farmlink.Cart_Delivery_Modals.ProductDataModel
 import com.example.farmlink.R
 import com.example.farmlink.listener.IRecyclerClickListener
 import com.example.farmlink.listener.ICartLoadListener
@@ -20,11 +20,11 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import org.greenrobot.eventbus.EventBus
 
-class MyDrinkAdapter(
+class MyProductAdapter(
     private val context: Context,
-    private val list: List<DrinkModel>,
+    private val list: List<ProductDataModel>,
     private val cartListener: ICartLoadListener
-): RecyclerView.Adapter<MyDrinkAdapter.MyDrinkViewHolder>(){
+): RecyclerView.Adapter<MyProductAdapter.MyDrinkViewHolder>(){
 
     class MyDrinkViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
@@ -75,7 +75,7 @@ class MyDrinkAdapter(
         })
     }
 
-    private fun addToCart(drinkModel: DrinkModel) {
+    private fun addToCart(drinkModel: ProductDataModel) {
         val userCart = FirebaseDatabase.getInstance()
             .getReference("Cart")
             .child("Unique_User_Id")
