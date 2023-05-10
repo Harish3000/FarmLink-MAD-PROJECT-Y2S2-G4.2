@@ -7,11 +7,13 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.farmlink.Cart_Delivery_Adapters.AddressAdapter
 import com.example.farmlink.Cart_Delivery_Modals.AddressData
+import com.example.farmlink.Cart_Delivery_Modals.CartModel
 import com.example.farmlink.R
 import com.google.firebase.database.*
 
@@ -37,6 +39,7 @@ class BillingActivity : AppCompatActivity() {
 
         addressList = arrayListOf<AddressData>()
 
+
         txtTotal = findViewById(R.id.txtTotal)
         val total = intent.getStringExtra("total")
         txtTotal.text = total
@@ -50,18 +53,50 @@ class BillingActivity : AppCompatActivity() {
         btn_back = findViewById(R.id.btn_back)
         btn_back.setOnClickListener{ finish() }
 
-        // initialize the database reference to the "Cart" node
-//        dbRef = FirebaseDatabase.getInstance().getReference("Cart").child("Unique_User_Id")
-
         btnOrder = findViewById(R.id.btnOrder)
         btnOrder.setOnClickListener {
 
-            val intent = Intent(this, SuccessDeliveryActivity::class.java)
-            startActivity(intent)
+            // Retrieve the cart items from the Firebase database
+            val cartItems: MutableList<CartModel> = mutableListOf()
+            dbRef = FirebaseDatabase.getInstance().getReference("Cart").child("Unique_User_Id")
+            dbRef.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    for (cartSnapshot in snapshot.children) {
+                        val cartModel = cartSnapshot.getValue(CartModel::class.java)
+                        cartModel!!.key = cartSnapshot.key
+                        cartItems.add(cartModel)
+                    }
+
+                    // Create a new OrderData object with the selected address, total, and cart items
+                    val order = OrderData(addressList[0], total, cartItems)
+
+                    // Push the order to the "Orders" node
+                    dbRef = FirebaseDatabase.getInstance().getReference("Orders")
+                    dbRef.push().setValue(order)
+                    Toast.makeText(this@BillingActivity, "Order Successfull!", Toast.LENGTH_LONG).show()
+
+                    // Navigate to the success delivery activity
+                    val intent2 = Intent(this@BillingActivity, SuccessDeliveryActivity::class.java)
+                    startActivity(intent2)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    // Handle the error
+                }
+            })
         }
+
+
+        dbRef = FirebaseDatabase.getInstance().getReference("Orders")
 
         getAddressData()
     }
+
+    data class OrderData(
+        val address: AddressData,
+        val total: String?,
+        val cartItems: List<CartModel>,
+    )
 
     private fun getAddressData(){
         addressRecyclerView.visibility = View.GONE

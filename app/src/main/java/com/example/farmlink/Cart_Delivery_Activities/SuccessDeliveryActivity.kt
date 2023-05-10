@@ -6,17 +6,21 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.farmlink.HomeFragment
 import com.example.farmlink.R
+import com.example.farmlink.store_manager_activities.MainActivity
 
 class SuccessDeliveryActivity : AppCompatActivity() {
 
-    lateinit var btnHome : Button
+    private lateinit var btnHome : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cartdelivery_success)
 
         btnHome = findViewById(R.id.btnHome)
-//        val intent = Intent(this, HomeFragment::class.java)
-//        startActivity(intent)
+        btnHome.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
