@@ -1,10 +1,13 @@
 package com.example.farmlink
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +25,9 @@ class SearchFragment : Fragment() {
     private lateinit var tvLoadingData: TextView
     private lateinit var sellerList: ArrayList<SellerModel>
     private lateinit var dbRef: DatabaseReference
+    private lateinit var originalSellerList: ArrayList<SellerModel>
+    private lateinit var searchBox: EditText
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,16 +39,31 @@ class SearchFragment : Fragment() {
         sellerRecyclerView.layoutManager = LinearLayoutManager(activity)
         sellerRecyclerView.setHasFixedSize(true)
         tvLoadingData = view.findViewById(R.id.tvLoadingData)
+        searchBox = view.findViewById(R.id.etSearch)
 
         sellerList = arrayListOf<SellerModel>()
+        originalSellerList = arrayListOf<SellerModel>()
 
         getSellerData()
+
+        searchBox.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                // Do nothing
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+                // Do nothing
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                searchSellerData(s.toString())
+            }
+        })
 
         return view
     }
 
     private fun getSellerData() {
-
         sellerRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
@@ -50,12 +71,14 @@ class SearchFragment : Fragment() {
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+                originalSellerList.clear()
                 sellerList.clear()
                 if (snapshot.exists()){
                     for (sellerSnap in snapshot.children){
                         val sellerData = sellerSnap.getValue(SellerModel::class.java)
-                        sellerList.add(sellerData!!)
+                        originalSellerList.add(sellerData!!)
                     }
+                    sellerList.addAll(originalSellerList)
                     val mAdapter = SellerAdapter(sellerList)
                     sellerRecyclerView.adapter = mAdapter
 
@@ -82,7 +105,16 @@ class SearchFragment : Fragment() {
             override fun onCancelled(error: DatabaseError) {
                 // Handle error
             }
-
         })
+    }
+
+    private fun searchSellerData(query: String?) {
+        sellerList.clear()
+        for (seller in originalSellerList) {
+            if (seller.sellerName?.contains(query ?: "", true) == true) {
+                sellerList.add(seller)
+            }
+        }
+        sellerRecyclerView.adapter?.notifyDataSetChanged()
     }
 }
