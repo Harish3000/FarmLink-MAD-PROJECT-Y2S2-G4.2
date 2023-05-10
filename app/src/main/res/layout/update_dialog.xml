@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+<!--    <EditText-->
+<!--        android:id="@+id/etEmpName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:hint="Name"-->
+<!--        android:inputType="textPersonName" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etEmpAge"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/etEmpSalary"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Employee Salary"-->
+<!--        android:inputType="textPersonName" />-->
+
+        <TextView
+            android:id="@+id/EditText"
+            android:layout_width="210dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/EditProfileText"
+            android:textColor="#151212"
+            android:textSize="@dimen/EditProfileTitle"
+            android:paddingLeft="10dp"/>
+
+
+        <EditText
+            android:id="@+id/etCusName"
+            android:layout_width="325dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="@string/Name"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            />
+
+        <EditText
+            android:id="@+id/etCusEmail"
+            android:layout_width="318dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/cusEmail"
+            android:paddingLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/etCusUsername"
+            android:layout_width="315dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/UserName"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="20dp"/>
+        <Button
+            android:id="@+id/btnUpdateData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Update Profile" />
+
+
+
+</LinearLayout>

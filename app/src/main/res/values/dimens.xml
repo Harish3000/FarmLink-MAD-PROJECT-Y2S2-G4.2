@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="EditProfileTitle">35sp</dimen>
+    <dimen name="ForgetPw">14sp</dimen>
+    <dimen name="SaveBtn">14sp</dimen>
+    <dimen name="DeleteBtn">14sp</dimen>
+    <dimen name="WelcomeTitle">40sp</dimen>
+    <dimen name="WelcomeDescription">20sp</dimen>
+    <dimen name="GetStartedBtn">14sp</dimen>
+    <dimen name="LoginTitle">35sp</dimen>
+    <dimen name="LoginEmail">20sp</dimen>
+    <dimen name="LoginEmailInput">18sp</dimen>
+    <dimen name="LoginPwd">20sp</dimen>
+    <dimen name="LoginPwdInput">18sp</dimen>
+    <dimen name="LoginForgetPwd">15sp</dimen>
+    <dimen name="Or">14sp</dimen>
+    <dimen name="FacebookTxt">18sp</dimen>
+    <dimen name="GoogleTxt">18sp</dimen>
+    <dimen name="LoginBtn">25sp</dimen>
+    <dimen name="SettingsTitle">30sp</dimen>
+    <dimen name="SettingsName">22sp</dimen>
+    <dimen name="SettingsContact">12sp</dimen>
+    <dimen name="EditProfileBtn">14sp</dimen>
+    <dimen name="SettingsOptions">14sp</dimen>
+    <dimen name="CreateAccountTitle">35sp</dimen>
+    <dimen name="CreateAccountTxt">20sp</dimen>
+    <dimen name="CreateAccountInputValues">18sp</dimen>
+    <dimen name="SignUpBtn">25sp</dimen>
     <dimen name="heading_text_size">20sp</dimen>
     <dimen name="toast_margin_bottom">16dp</dimen>
 </resources>
