@@ -26,7 +26,8 @@
     <dimen name="CreateAccountTxt">20sp</dimen>
     <dimen name="CreateAccountInputValues">18sp</dimen>
     <dimen name="SignUpBtn">25sp</dimen>
-</resources>
-
     <dimen name="heading_text_size">20sp</dimen>
 </resources>
+
+
+
