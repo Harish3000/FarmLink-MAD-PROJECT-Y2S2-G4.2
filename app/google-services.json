@@ -1,16 +1,15 @@
 {
   "project_info": {
     "project_number": "404006600063",
-    "firebase_url": "https://farmlink-bcfca-default-rtdb.firebaseio.com",
     "project_id": "farmlink-bcfca",
     "storage_bucket": "farmlink-bcfca.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:404006600063:android:9de95752a0dab27dbb6e4a",
+        "mobilesdk_app_id": "1:404006600063:android:c02199d9a2a93774bb6e4a",
         "android_client_info": {
-          "package_name": "com.example.finalfarmlinkapp"
+          "package_name": "com.example.farmlink"
         }
       },
       "oauth_client": [

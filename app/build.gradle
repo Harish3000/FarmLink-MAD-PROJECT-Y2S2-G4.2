@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.finalfarmlinkapp'
+    namespace 'com.example.farmlink'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.finalfarmlinkapp"
+        applicationId "com.example.farmlink"
         minSdk 21
         targetSdk 33
         versionCode 1
